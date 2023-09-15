@@ -67,7 +67,7 @@ unit=时间段间隔单位
 
 ```
  //指定表
- $schedule->command('clear-table --table=pb_shopee_global_platform_collect_product_sku_log', '* * * * *');
+ $schedule->command('clear-table --table=your_table', '* * * * *');
 
  //不指定
  $schedule->command('clear-table', '* * * * *');
