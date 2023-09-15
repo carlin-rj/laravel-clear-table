@@ -15,14 +15,18 @@ class LaravelClearTableServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->publishes([
-            $this->getConfigFile() => config_path('clear-tables.php'),
-        ], 'config');
+		$this->publishes([
+			$this->getConfigFile() => config_path('clear-tables.php'),
+		], 'config');
 
-        $this->mergeConfigFrom(
-            __DIR__.'/config/clear-tables.php', 'clear-tables'
-        );
     }
+	public function register(): void
+	{
+		$this->mergeConfigFrom(
+			$this->getConfigFile(),
+			'clear-tables'
+		);
+	}
 
     protected function getConfigFile(): string
     {
