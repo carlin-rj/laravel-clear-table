@@ -73,7 +73,7 @@ class ClearTableCommand extends Command
                             $totalDeletedForRange += $deletedCount;
                         }
                     });
-                $this->info("Deleted logs from {$range['start']} to {$range['end']}. Total: $totalDeletedForRange");
+                $this->info("Deleted logs {$tableName} from {$range['start']} to {$range['end']}. Total: $totalDeletedForRange");
             }
 
             // 优化表
