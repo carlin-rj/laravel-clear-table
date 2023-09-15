@@ -50,6 +50,11 @@ class ClearTableCommand extends Command
             $tableConfigs = [$tableConfig];
         }
 
+		if (empty($tableConfigs)) {
+			$this->error("not configure clear_tables");
+			return;
+		}
+
         foreach ($tableConfigs as $tableName => $tableConfig) {
             $dateRanges = generateDateRanges($interval, $unit, now()->subDays($startDay), now()->subDays($endDay));
             foreach ($dateRanges as $range) {
