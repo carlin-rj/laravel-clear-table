@@ -58,7 +58,7 @@ php artisan clear-tables --table=your_table
 php artisan clear-tables {startDay=40} {endDay=30} {interval=10} {unit=day} {--table=}
 
 startDay=生成时间段的开始天数 当前时间往前推n天
-endDay=生成时间段的结束天数
+endDay=生成时间段的结束天数 (如果您要保留30天的数据则这个必须>=30天)
 interval=时间段间隔
 unit=时间段间隔单位
 ```
