@@ -23,10 +23,7 @@ class LaravelClearTableServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->mergeConfigFrom(
-            $this->getConfigFile(),
-            'clear-tables'
-        );
+
     }
 
     protected function getConfigFile(): string
