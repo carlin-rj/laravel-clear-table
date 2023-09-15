@@ -2,10 +2,11 @@
 
 namespace Mckue\Commands;
 
+use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
-class ClearTableCommand extends BaseCommand
+class ClearTableCommand extends Command
 {
     /**
      * The name and signature of the console command.
