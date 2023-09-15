@@ -2,7 +2,6 @@
 
 namespace Mckue\LaravelClearTable;
 
-
 use Illuminate\Support\ServiceProvider;
 use Mckue\LaravelClearTable\Commands\ClearTableCommand;
 
