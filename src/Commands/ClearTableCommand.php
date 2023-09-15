@@ -1,6 +1,6 @@
 <?php
 
-namespace Mckue\Commands;
+namespace Mckue\LaravelClearTable\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
