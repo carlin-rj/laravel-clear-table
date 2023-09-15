@@ -56,7 +56,8 @@ class ClearTableCommand extends Command
             return;
         }
 
-        foreach ($tableConfigs as $tableName => $tableConfig) {
+        foreach ($tableConfigs as $tableConfig) {
+            $tableName = new $config['model'])->getTable();
             $dateRanges = generateDateRanges($interval, $unit, now()->subDays($startDay), now()->subDays($endDay));
             foreach ($dateRanges as $range) {
                 $totalDeletedForRange = 0;  // 初始化计数器，用于计算当前日期范围内的删除总数
