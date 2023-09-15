@@ -16,11 +16,11 @@ class LaravelClearTableServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/config/clear-table.php' => config_path('clear-table.php'),
-        ], 'clear-table');
+            __DIR__.'/config/clear-tables.php' => config_path('clear-tables.php'),
+        ], 'clear-tables');
 
         $this->mergeConfigFrom(
-            __DIR__.'/config/clear-table.php', 'clear-table'
+            __DIR__.'/config/clear-tables.php', 'clear-tables'
         );
     }
 }

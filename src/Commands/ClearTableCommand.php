@@ -13,7 +13,7 @@ class ClearTableCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'clear-table {startDay=40} {endDay=30} {interval=10} {unit=day} {--table=}';
+    protected $signature = 'clear-tables {startDay=40} {endDay=30} {interval=10} {unit=day} {--table=}';
 
     /**
      * The console command description.
@@ -39,7 +39,7 @@ class ClearTableCommand extends Command
 
             return;
         }
-        $tableConfigs = config('clear-tables');
+        $tableConfigs = config('clear-tabless');
         if (isset($specificTable)) {
             if (! isset($tableConfigs[$specificTable])) {
                 $this->error("{$specificTable} not configure clear_tables");
