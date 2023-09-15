@@ -41,12 +41,13 @@ class ClearTableCommand extends Command
         }
         $tableConfigs = config('clear-tabless');
         if (isset($specificTable)) {
-			$tableConfig = $this->findTableConfig($specificTable, $tableConfigs);
+            $tableConfig = $this->findTableConfig($specificTable, $tableConfigs);
             if (empty($tableConfig)) {
                 $this->error("{$specificTable} not configure clear_tables");
+
                 return;
             }
-			$tableConfigs = [$tableConfig];
+            $tableConfigs = [$tableConfig];
         }
 
         foreach ($tableConfigs as $tableName => $tableConfig) {
@@ -76,14 +77,15 @@ class ClearTableCommand extends Command
         }
     }
 
-	private function findTableConfig(string $tableName, array $tableConfigs): ?array
-	{
-		foreach ($tableConfigs as $config) {
-			/** @var Builder $config */
-			if ($tableName === $config['model']::query()->getTable()) {
-				return $config;
-			}
-		}
-		return null;
-	}
+    private function findTableConfig(string $tableName, array $tableConfigs): ?array
+    {
+        foreach ($tableConfigs as $config) {
+            /** @var Builder $config */
+            if ($tableName === $config['model']::query()->getTable()) {
+                return $config;
+            }
+        }
+
+        return null;
+    }
 }
