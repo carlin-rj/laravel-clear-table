@@ -39,7 +39,7 @@ class ClearTableCommand extends Command
 
             return;
         }
-        $tableConfigs = config('clear-tabless');
+        $tableConfigs = config('clear-tables');
         if (isset($specificTable)) {
             $tableConfig = $this->findTableConfig($specificTable, $tableConfigs);
             if (empty($tableConfig)) {
