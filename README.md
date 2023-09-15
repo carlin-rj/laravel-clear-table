@@ -67,8 +67,8 @@ unit=时间段间隔单位
 
 ```
  //指定表
- $schedule->command('clear-table --table=your_table', '* * * * *');
+ $schedule->command('clear-table --table=your_table', '* 5 * * *');
 
- //不指定
- $schedule->command('clear-table', '* * * * *');
+ //不指定表
+ $schedule->command('clear-table', '* 5 * * *');
 ```
