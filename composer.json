@@ -2,6 +2,13 @@
     "name": "mckue/laravel-clear-table",
     "description": "Clear log table data through personalized configuration",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "php",
+        "clear-table",
+        "clear",
+        "table"
+    ],
     "require": {
         "php": ">=7.3",
         "illuminate/support": "5.8.*|^6.0|^7.0|^8.0|^9.0|^10.0"
