@@ -4,7 +4,7 @@ namespace Mckue\LaravelClearTable;
 
 use Mckue\LaravelClearTable\Commands\ClearTableCommand;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+class LaravelClearTableServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot()
     {
