@@ -41,7 +41,7 @@ return [
 ];
 ```
 
-## 添加定时任务 or 执行清理任务
+## 执行命令 or 定时任务
 
 执行命令会跑配置项的所有的表
 ```
@@ -61,7 +61,14 @@ startDay=生成时间段的开始天数 当前时间往前推n天
 endDay=生成时间段的结束天数
 interval=时间段间隔
 unit=时间段间隔单位
-
-
 ```
 
+### 定时任务
+
+```
+ //指定表
+ $schedule->command('clear-table --table=pb_shopee_global_platform_collect_product_sku_log', '* * * * *');
+
+ //不指定
+ $schedule->command('clear-table', '* * * * *');
+```
