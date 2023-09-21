@@ -27,7 +27,7 @@ return [
 	 //批次处理删除n条数据
       	'chunk_size'=>2000,
          //模型类
-    	'model'        => ShopeeGlobalCollectSkuLog::class,
+    	'model'        => YourModel::class,
          //是否优化表
     	'is_optimized' => true,
          //表条件
