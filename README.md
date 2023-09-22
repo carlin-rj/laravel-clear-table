@@ -26,7 +26,7 @@ return [
     [
 	 //批次处理删除n条数据
       	'chunk_size'=>2000,
-         //模型类
+         //模型类 或者 表名
     	'model'        => YourModel::class,
          //是否优化表
     	'is_optimized' => true,
