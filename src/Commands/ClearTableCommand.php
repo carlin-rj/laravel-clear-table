@@ -86,7 +86,7 @@ class ClearTableCommand extends Command
 
     private function newModel(array $tableConfig)
     {
-        if ($tableConfig['model'] instanceof \Illuminate\Database\Eloquent\Model) {
+        if (is_subclass_of($tableConfig['model'], \Illuminate\Database\Eloquent\Model::class)) {
             return $tableConfig['model']::query();
         } else {
             return DB::table($tableConfig['model']);
@@ -95,7 +95,7 @@ class ClearTableCommand extends Command
 
     private function getTableName(array $tableConfig): string
     {
-        return $tableConfig['model'] instanceof \Illuminate\Database\Eloquent\Model ? (new $tableConfig['model'])->getTable() : $tableConfig['model'];
+        return is_subclass_of($tableConfig['model'], \Illuminate\Database\Eloquent\Model::class) ? (new $tableConfig['model'])->getTable() : $tableConfig['model'];
     }
 
     private function findTableConfig(string $tableName, array $tableConfigs): ?array
