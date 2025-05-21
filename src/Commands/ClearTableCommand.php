@@ -72,6 +72,7 @@ class ClearTableCommand extends Command
 
 					// 限制条件：日期范围 + id > lastId（无排序）
 					$rows = $query
+						->whereBetween($tableConfig['date_column'], [$range['start'], $range['end']])
 						->where('id', '>', $lastId)
 						->limit($chunkSize)
 						->get(['id']);
