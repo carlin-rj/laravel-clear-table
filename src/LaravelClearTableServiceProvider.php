@@ -17,7 +17,7 @@ class LaravelClearTableServiceProvider extends ServiceProvider
 
         $this->publishes([
             $this->getConfigFile() => config_path('clear-tables.php'),
-        ], 'config');
+        ], 'clear-tables');
 
     }
 
