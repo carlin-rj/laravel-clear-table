@@ -16,5 +16,6 @@ return [
         },
         //通过时间字段分段删除(这个字段要求为索引类型的时间字段，否则效果适得其反)
         'date_column' => 'created_at',
+		'date_type' => 'datetime', //timestamp,timestamp_ms,date,datetime 默认为datetime
     ],
 ];
